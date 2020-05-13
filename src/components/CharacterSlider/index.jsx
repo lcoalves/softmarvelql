@@ -21,23 +21,27 @@ const CharacterSlider = ({ characters }) => {
         infinite
         arrows
         slidesPerPage={5}
+        slidesPerScroll={5}
         keepDirectionWhenDragging
-        arrowLeft={<FaAngleDoubleLeft />}
-        arrowLeftDisabled={<FaAngleLeft />}
-        arrowRight={<FaAngleDoubleRight />}
-        arrowRightDisabled={<FaAngleRight />}
+        arrowLeft={<FaAngleDoubleLeft size={28} />}
+        arrowLeftDisabled={<FaAngleLeft size={28} />}
+        arrowRight={<FaAngleDoubleRight size={28} />}
+        arrowRightDisabled={<FaAngleRight size={28} />}
         addArrowClickHandler
         breakpoints={{
           640: {
             slidesPerPage: 1,
+            slidesPerScroll: 1,
             arrows: false,
           },
           900: {
             slidesPerPage: 2,
+            slidesPerScroll: 2,
             arrows: false,
           },
           1024: {
             slidesPerPage: 3,
+            slidesPerScroll: 3,
             arrows: false,
           },
         }}

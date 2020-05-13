@@ -2,7 +2,6 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { useCharacter } from '../../../hooks/character';
-
 import { Container, Thumbnail, Name } from './styles';
 
 const CharacterCard = ({
@@ -28,9 +27,16 @@ const CharacterCard = ({
   }
 
   return (
-    <Container isActive={isActive} onClick={handleSelectCharacter}>
-      <Thumbnail src={`${thumbnail.path}.${thumbnail.extension}`} />
-      <Name>{name}</Name>
+    <Container
+      data-testid="characterCard"
+      isActive={isActive}
+      onClick={handleSelectCharacter}
+    >
+      <Thumbnail
+        data-testid="characterCardImg"
+        src={`${thumbnail.path}.${thumbnail.extension}`}
+      />
+      <Name data-testid="characterCardName">{name}</Name>
     </Container>
   );
 };

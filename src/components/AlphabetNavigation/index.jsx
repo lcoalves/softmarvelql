@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useEffect, useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Creators as CharacterActions } from '../../store/ducks/character';
 
@@ -8,31 +8,30 @@ import alphabet from '../../utils/alphabet';
 import { Container, NavItem, NavLink } from './styles';
 
 const AlphabetNavigation = () => {
-  const [selectedLetter, setSelectedLetter] = useState('A');
+  const letter = useSelector((state) => state.character.letter);
 
   const dispatch = useDispatch();
 
   const handleChangeLetter = useCallback(
-    (letter) => {
-      setSelectedLetter(letter);
-      dispatch(CharacterActions.characterRequest(letter));
+    (newLetter) => {
+      dispatch(CharacterActions.letterRequest(newLetter));
     },
     [dispatch],
   );
 
   useEffect(() => {
-    dispatch(CharacterActions.characterRequest('A'));
-  }, [dispatch]);
+    dispatch(CharacterActions.characterRequest(letter));
+  }, [dispatch, letter]);
 
   return (
     <Container>
-      {alphabet.map((letter) => (
+      {alphabet.map((alphabetLetter) => (
         <NavItem
-          key={letter}
-          active={letter === selectedLetter}
-          onClick={() => handleChangeLetter(letter)}
+          key={alphabetLetter}
+          active={alphabetLetter === letter}
+          onClick={() => handleChangeLetter(alphabetLetter)}
         >
-          <NavLink href="#">{letter}</NavLink>
+          <NavLink href="#">{alphabetLetter}</NavLink>
         </NavItem>
       ))}
     </Container>

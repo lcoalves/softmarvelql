@@ -1,13 +1,21 @@
 import { all, takeLatest, put, call } from 'redux-saga/effects';
 
-import { toast } from 'react-toastify';
-
 import api from '../../services/api';
 
 import {
   Creators as CharacterActions,
   Types as CharacterTypes,
 } from '../ducks/character';
+
+function* changeLetter(action) {
+  try {
+    const { newLetter } = action.payload;
+
+    yield put(CharacterActions.letterSuccess(newLetter));
+  } catch (err) {
+    yield put(CharacterActions.letterFailure());
+  }
+}
 
 function* characters(action) {
   try {
@@ -25,11 +33,11 @@ function* characters(action) {
 
     yield put(CharacterActions.characterSuccess(results));
   } catch (err) {
-    toast.error('Houve um erro ao listar os personagens.');
     yield put(CharacterActions.characterFailure());
   }
 }
 
 export default function* rootSaga() {
   yield all([takeLatest(CharacterTypes.REQUEST, characters)]);
+  yield all([takeLatest(CharacterTypes.LETTER_REQUEST, changeLetter)]);
 }
