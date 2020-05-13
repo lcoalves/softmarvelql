@@ -1,68 +1,84 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+  <img alt="SoftMarvelQL" title="SoftMarvelQL" src=".github/marvel.png" width="200px" />
+</h1>
 
-## Available Scripts
+<h3 align="center">
+  SoftMarvelQL, nesse desafio foi criada uma aplicação que consome e apresenta os personagens da MARVEL.
+  <br>
+  A aplicação foi desenvolvida com React.
+</h3>
 
-In the project directory, you can run:
+<p align="center">See in action: <a href="https://softmarvelql.herokuapp.com/#/">click here</a></p>
+<p align="center">See in action (Github Pages): <a href="https://lcoalves.github.io/softmarvelql">click here</a></p>
 
-### `yarn start`
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/lcoalves/softmarvelql?color=%2304D361">
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+  <a href="https://github.com/lcoalves">
+    <img alt="Made by Lucas Alves" src="https://img.shields.io/badge/made%20by-Lucas%20Alves-%2304D361">
+  </a>
 
-### `yarn test`
+  <a href="https://github.com/lcoalves/softmarvelql/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/lcoalves/softmarvelql?style=social">
+  </a>
+</p>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `yarn build`
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+- [NodeJS](https://nodejs.org/en/) - Environment runtime
+- [Yarn](https://yarnpkg.com/getting-started/install) - Packager manager
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+What things you need to install the software and how to install them
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+$> git clone https://github.com/lcoalves/softmarvelql.git
+```
 
-### `yarn eject`
+### Installing
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+A step by step series of examples that tell you how to get a development env running
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Databases
+First install front-end dependencies
+```
+$> cd softmarvelql && yarn
+```
+Next open the code
+```
+$> code .
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Front-end
+Start front-end service
+```
+$> yarn start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Front-end (Running TESTS)
+Run
+```
+$> yarn test
+```
 
-## Learn More
+## Built With
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* [React](https://reactjs.org/docs/getting-started.html) - A JavaScript library for building user interfaces
+* [Jest](https://jestjs.io/docs/en/getting-started) - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Authors
 
-### Code Splitting
+* **Lucas Alves** - *Full Stack Developer* - [GitHub profile](https://github.com/lcoalves)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## License
 
-### Analyzing the Bundle Size
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/lcoalves/softmarvelql/blob/master/LICENSE) file for details
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Acknowledgments
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* React
+* Jest
